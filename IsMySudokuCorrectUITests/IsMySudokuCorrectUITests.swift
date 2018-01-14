@@ -31,6 +31,31 @@ class IsMySudokuCorrectUITests: XCTestCase {
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+
+        
+        let app = XCUIApplication()
+        app.otherElements.containing(.staticText, identifier:"Is My Sudoku Correct?").element.tap()
+        
+        let textView = app.otherElements.containing(.staticText, identifier:"Is My Sudoku Correct?").children(matching: .textView).element
+        textView.tap()
+        app.buttons["9 x 9"].tap()
+        textView.tap()
+        textView.typeText("435269781682571493197834562826195347374682915951743628519326874248957136763418259")
+        
+        let checkButton = app.buttons["Check"]
+        checkButton.tap()
+        app.buttons["6 x 6"].tap()
+        textView.tap()
+        textView.typeText("235614146523612435354261523146461352")
+        checkButton.tap()
+        textView.typeText("2365")
+        checkButton.tap()
+        app.alerts["Error"].buttons["OK"].tap()
+
+
+
+        
+
     }
     
 }
