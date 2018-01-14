@@ -51,7 +51,6 @@ class ViewController: UIViewController {
             let mySudokuArray: String = sudokuTextView.text
             let mySudokuSize: Int = Int(sudokuSize)!
             let countedSudokuSize: Int = Int(sudokuTextView.text.count)
-            let isMySudokuSizeEven : Bool = mySudokuSize % 2 == 0
 
             if mySudokuSize >= 3 {
                 
@@ -59,7 +58,7 @@ class ViewController: UIViewController {
                     let mySudoku = Array(mySudokuArray).chunks(mySudokuSize)
                     print(mySudoku)
                     
-                    if Sudoku.isTrueForAll(mySudoku, mySudokuSize: mySudokuSize, isMySudokuSizeEven: isMySudokuSizeEven) {
+                    if Sudoku.isTrueForAll(mySudoku, mySudokuSize: mySudokuSize) {
                         resultLabel.text = "😃 Correct!"
                     } else {
                         resultLabel.text = "🙁 Not correct"

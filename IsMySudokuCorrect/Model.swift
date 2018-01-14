@@ -25,7 +25,8 @@ class Sudoku {
         return true
     }
     
-    class func isTrueForAll (_ board: [[Character]], mySudokuSize: Int, isMySudokuSizeEven: Bool) -> Bool {
+    class func isTrueForAll (_ board: [[Character]], mySudokuSize: Int) -> Bool {
+        let isMySudokuSizeEven : Bool = mySudokuSize % 2 == 0
         for i in 0..<mySudokuSize {
             if isTrueForEach(board: board, x1: i, y1: 0, x2: i, y2: mySudokuSize-1) == false {
                 return false
