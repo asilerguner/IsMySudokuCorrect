@@ -18,8 +18,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var sudokuTextView: UITextView!
     @IBOutlet weak var resultLabel: UILabel!
     
-//    let mySudokuArray: String = "435269781682571493197834562826195347374682915951743628519326874248957136763418259"
-//    let mySudokuArray: String = "235614146523612435354261523146461352"
+//  let mySudokuArray: String =     "435269781682571493197834562826195347374682915951743628519326874248957136763418259"
+//  let mySudokuArray: String = "235614146523612435354261523146461352"
     
     @IBAction func sizeSelectButtonPressed(_ sender: UIButton) {
         switch sender {
